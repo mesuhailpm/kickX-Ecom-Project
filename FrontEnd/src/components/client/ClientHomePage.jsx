@@ -5,6 +5,11 @@ import {
   ShoppingOutlined,
   CopyrightOutlined,
 } from "@ant-design/icons";
+import PumaLogo from "../../../public/pumalogo.png";
+import AdidasLogo from "../../../public/adidaslogo.png";
+import NikeLogo from "../../../public/nikelogo.png";
+import PopularCollection from "../../../public/shoetrans.png";
+import ProductImage from "../../../public/shoetransparent.png";
 
 const ClientHomePage = () => {
   return (
@@ -104,21 +109,9 @@ const ClientHomePage = () => {
           }}
           className="brand-logos"
         >
-          <img
-            src="./../../../public/adidaslogo.png"
-            alt=""
-            className="img-brand-logo"
-          />
-          <img
-            src="./../../../public/pumalogo.png"
-            alt=""
-            className="img-brand-logo"
-          />
-          <img
-            src="./../../../public/nikelogo.png"
-            alt=""
-            className="img-brand-logo"
-          />
+          <img src={AdidasLogo} alt="" className="img-brand-logo" />
+          <img src={PumaLogo} alt="" className="img-brand-logo" />
+          <img src={NikeLogo} alt="" className="img-brand-logo" />
         </div>
       </div>
       <div
@@ -151,7 +144,7 @@ const ClientHomePage = () => {
               <div key={idx} className="collection-item">
                 <img
                   className="collection-item-image"
-                  src="../../../public/shoetrans.png"
+                  src={PopularCollection}
                   alt=""
                 />
                 <div className="popular-collection-item-name">
@@ -203,7 +196,7 @@ const ClientHomePage = () => {
               <div key={idx} className="collection-item">
                 <img
                   className="collection-item-image"
-                  src="../../../public/shoetrans.png"
+                  src={PopularCollection}
                   alt=""
                 />
                 <div className="popular-collection-item-name">
@@ -246,7 +239,7 @@ const ClientHomePage = () => {
               <div key={idx} className="all-collection-item">
                 <img
                   className="all-collection-item-image"
-                  src="../../../public/shoetransparent.png"
+                  src={ProductImage}
                   alt=""
                 />
                 <div className="all-collection-item-name">
