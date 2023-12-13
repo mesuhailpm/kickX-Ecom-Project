@@ -1,0 +1,49 @@
+.main > div:nth-child(1) > * {
+  margin-bottom: 0.5em;
+}
+
+.main > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blue; */
+  margin: 2em 0 1em 0;
+}
+
+.main > div:nth-child(2) select {
+  /* background-color: blue; */
+  padding: 0.5em 1.25em;
+  border-radius: 0.5em;
+}
+
+.main > div:nth-child(2) > div:nth-child(1) {
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  column-gap: 2em;
+}
+
+.products {
+  display: grid;
+  place-items: center;
+  padding: 1em 0;
+  gap: 1em;
+  row-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.products > article {
+  height: 300px;
+  width: 300px;
+  border-radius: 0.5em;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.products > article:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
