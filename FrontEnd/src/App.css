@@ -63,10 +63,13 @@
 .brand-logos > * {
   padding-right: 1em;
   height: 3.5em;
+  transition: 300ms ease-in-out;
 }
 
 .brand-logos > *:hover {
+  transition: 300ms ease-in-out;
   cursor: pointer;
+  scale: 1.05;
 }
 
 /* .brand-logos > *:nth-child(1) {
@@ -264,16 +267,121 @@
   /* background-color: blue; */
 }
 
-.footer {
+.footer-one {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: auto auto;
+  margin-top: 4em;
+  width: 95%;
+  gap: 3em;
+}
+
+.footer-one > * {
+  height: 200px;
+  /* background-color: gray; */
+}
+
+.footer-one > div:nth-child(1) {
+  padding: 1em 0 0 2em;
+}
+
+.socials {
+  display: flex;
+  gap: 0.75em;
+  margin-top: 0.75em;
+}
+
+.social {
+  background: white;
+  border: 1px solid gray;
+  width: fit-content;
+  padding: 0.5em;
+  border-radius: 50%;
+  transition: 300ms ease-in-out;
+}
+
+.social:hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+  transition: 300ms ease-in-out;
+}
+
+.sign-up {
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+.footer > div:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
   padding: 2em 0;
   margin: 0 3em 0 3em;
-  margin-top: 5em;
+  margin-top: 3em;
   color: rgb(102, 101, 101);
   border-top: 1px solid black;
+  /* background: blue; */
+}
+
+.slider-header {
+  position: relative;
+}
+
+.left-arrow-parent {
+  position: absolute;
+  top: 50%;
+  color: black;
+  background: white;
+  left: 2%;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.right-arrow-parent {
+  position: absolute;
+  top: 50%;
+  color: black;
+  background: white;
+  right: 2%;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.showrooms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5em;
+}
+
+.showrooms-grid > * {
+  height: 500px;
+  margin: 1em 0;
+  /* background-color: #f8f8fa; */
+  background: gray;
+}
+
+.discover-all-section {
+  margin: auto auto;
+  margin-top: 3em;
+  width: 95%;
+  padding: 1.25em 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
 }
 
 @keyframes logoblur {

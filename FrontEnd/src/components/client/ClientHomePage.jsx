@@ -10,6 +10,10 @@ import AdidasLogo from "../../../public/adidaslogo.png";
 import NikeLogo from "../../../public/nikelogo.png";
 import PopularCollection from "../../../public/shoetrans.png";
 import ProductImage from "../../../public/shoetransparent.png";
+import SliderHeader from "./SliderHeader";
+import Showrooms from "./Showrooms";
+import DiscoverAll from "./DiscoverAll";
+import Footer from "./Footer";
 
 const ClientHomePage = () => {
   return (
@@ -57,27 +61,7 @@ const ClientHomePage = () => {
           </span>
         </div>
       </div>
-      <div
-        style={{ padding: "0em 3em", margin: "1em 0" }}
-        className="header-slider"
-      >
-        <div
-          style={{
-            display: "block",
-            backgroundColor: "#F8F8FA",
-            height: "500px",
-          }}
-          className="slider-content"
-        >
-          {/* <div className="all-collection-item">
-            <img
-              className="all-collection-item-image"
-              src="../../../public/shoetra.png"
-              alt=""
-            />
-          </div> */}
-        </div>
-      </div>
+      <SliderHeader />
       <div
         style={{
           display: "flex",
@@ -260,6 +244,8 @@ const ClientHomePage = () => {
         </div>
         <div></div>
       </div>
+      <DiscoverAll />
+      <Showrooms />
       <div className="member-container">
         <div>
           <h1 className="become">Become</h1>
@@ -276,10 +262,7 @@ const ClientHomePage = () => {
           <h1 className="k">kick X</h1>
         </div>
       </div>
-      <footer className="footer">
-        <CopyrightOutlined /> <b>kick X</b> {new Date().getFullYear()}. All
-        rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 };
