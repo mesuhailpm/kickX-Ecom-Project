@@ -2,8 +2,11 @@ import {
   CopyrightOutlined,
   TwitterOutlined,
   MailOutlined,
+  FacebookOutlined,
+  GithubOutlined,
+  InstagramOutlined,
 } from "@ant-design/icons";
-import { Input, Space } from "antd";
+import { Input } from "antd";
 const { Search } = Input;
 
 const Footer = () => {
@@ -17,13 +20,13 @@ const Footer = () => {
               <TwitterOutlined />
             </div>
             <div className="social">
-              <TwitterOutlined />
+              <InstagramOutlined />
             </div>
             <div className="social">
-              <TwitterOutlined />
+              <FacebookOutlined />
             </div>
             <div className="social">
-              <TwitterOutlined />
+              <GithubOutlined />
             </div>
           </div>
           <p className="sign-up">Sign up for personalized offers</p>

@@ -294,10 +294,12 @@
 .social {
   background: white;
   border: 1px solid gray;
-  width: fit-content;
-  padding: 0.5em;
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
   transition: 300ms ease-in-out;
+  display: grid;
+  place-items: center;
 }
 
 .social:hover {
