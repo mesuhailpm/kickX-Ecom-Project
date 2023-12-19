@@ -1,4 +1,3 @@
-import { ClientNavbar as Navbar } from "./ClientNavbar";
 import SliderHeader from "./SliderHeader";
 import TopBrands from "./TopBrands";
 import { PopularCollection as PopCollection } from "./PopularCollectoins";
@@ -7,12 +6,10 @@ import AllCollections from "./AllCollections";
 import Showrooms from "./Showrooms";
 import MemberContainer from "./MemberContainer";
 import DiscoverAll from "./DiscoverAll";
-import Footer from "./Footer";
 
 const ClientHomePage = () => {
   return (
     <main className="client-home">
-      <Navbar />
       <SliderHeader />
       <TopBrands />
       <PopCollection />
@@ -21,7 +18,6 @@ const ClientHomePage = () => {
       <DiscoverAll />
       <Showrooms />
       <MemberContainer />
-      <Footer />
     </main>
   );
 };

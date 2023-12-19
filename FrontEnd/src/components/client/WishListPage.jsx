@@ -1,34 +1,14 @@
 import { ShoppingOutlined, HeartOutlined } from "@ant-design/icons";
 import ProductImage from "../../../public/shoetransparent.png";
+import { useGlobalContext } from "../AppProvider";
 
-const AllCollections = () => {
+const WishListPage = () => {
+  const { wishLength } = useGlobalContext();
   return (
-    <div
-      style={{ padding: "0em 3em", margin: "2em 0em" }}
-      className="all-collections"
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginTop: "4em",
-        }}
-      >
-        <h2 className="popular">All Collections</h2>
-        <h4
-          style={{
-            textDecoration: "underline",
-            textUnderlineOffset: "5px",
-            cursor: "pointer",
-          }}
-          className="discover"
-        >
-          Discover All
-        </h4>
-      </div>
+    <div className="wish-list">
+      <h2 className="title">Wishlist</h2>
       <div className="all-collection-items">
-        {Array.from({ length: 12 }, (_, idx) => {
+        {Array.from({ length: wishLength }, (_, idx) => {
           return (
             <div key={idx} className="all-collection-item">
               <img
@@ -56,4 +36,4 @@ const AllCollections = () => {
   );
 };
 
-export default AllCollections;
+export default WishListPage;

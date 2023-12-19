@@ -1,5 +1,5 @@
 import { Layout, Button, Menu, Avatar, Typography, Dropdown } from "antd";
-import { Outlet, Link, NavLink, useLocation } from "react-router-dom";
+import { Outlet, NavLink, useLocation } from "react-router-dom";
 import {
   UploadOutlined,
   UserOutlined,
