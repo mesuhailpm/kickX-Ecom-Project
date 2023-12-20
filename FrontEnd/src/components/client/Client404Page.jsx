@@ -1,8 +1,14 @@
+import Image from "../../../public/404-error.png";
+
 const Client404Page = () => {
   return (
     <div className="no-page">
-      The page that your looking is not available or its broken or its
-      temporatily taken down by the server
+      <div>
+        <img src={Image} alt="" className="not-available" />
+        <h1>404</h1>
+        <br />
+        <h3>The page that you are looking is not available</h3>
+      </div>
     </div>
   );
 };
