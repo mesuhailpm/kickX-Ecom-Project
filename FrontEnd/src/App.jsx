@@ -14,6 +14,7 @@ import Customers from "./components/Customers";
 import Inventory from "./components/Inventory";
 import Settings from "./components/Settings";
 import LoginPage from "./components/LoginPage";
+import ShopPage from "./components/ShopPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="product" element={<ClientProductPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="wishlist" element={<WishListPage />} />
+          <Route path="shop" element={<ShopPage />} />
           <Route path="*" element={<Client404Page />} />
         </Route>
         <Route path="/admin" element={<SharedLayout />}>
