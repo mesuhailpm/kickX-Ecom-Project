@@ -3,12 +3,10 @@ import login from "./Routes/login.js";
 import singup from "./Routes/signup.js";
 
 const app = express();
-// const port = 3080;
+const port = 8080;
 
-// app.listen(port);
+app.listen(port);
 app.use(express.json());
-
-console.log("hey");
 
 app.get("/", (req, res) => {
   res.send("Home Page");
