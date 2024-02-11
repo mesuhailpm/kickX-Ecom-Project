@@ -26,6 +26,7 @@ function App() {
           <Route path="cart" element={<CartPage />} />
           <Route path="wishlist" element={<WishListPage />} />
           <Route path="shop" element={<ClientShopPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<Client404Page />} />
         </Route>
         <Route path="/admin" element={<SharedLayout />}>
@@ -36,9 +37,6 @@ function App() {
           <Route path="inventory" element={<Inventory />} />
           <Route path="settings" element={<Settings />} />
         </Route>
-      </Routes>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );

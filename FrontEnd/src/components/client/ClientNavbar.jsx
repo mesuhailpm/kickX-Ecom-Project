@@ -2,12 +2,14 @@ import {
   SearchOutlined,
   HeartOutlined,
   ShoppingCartOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import ProductSearch from "../ProductSearch";
 import { useGlobalContext } from "../AppProvider";
 
 export const ClientNavbar = () => {
-  const { wishLength } = useGlobalContext();
+  const { wishLength, showSearchModal, isModalOpen } = useGlobalContext();
 
   return (
     <div
@@ -49,7 +51,7 @@ export const ClientNavbar = () => {
       </div>
       <div style={{ display: "flex", columnGap: "1em" }}>
         <span>
-          <SearchOutlined className="icon" />
+          <SearchOutlined onClick={showSearchModal} className="icon" />
         </span>
         <Link to="wishlist" className="router-link">
           <span className="wish-icon-parent">
@@ -63,7 +65,13 @@ export const ClientNavbar = () => {
             <h6 className="bag-count">12</h6>
           </span>
         </Link>
+        <Link to="login" className="router-link">
+          <span className="bag-icon-parent">
+            <UserOutlined className="icon bag-icon-child" />
+          </span>
+        </Link>
       </div>
+      {isModalOpen && <ProductSearch />}
     </div>
   );
 };
