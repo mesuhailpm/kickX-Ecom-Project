@@ -1,7 +1,7 @@
 import { ShoppingOutlined, HeartOutlined } from "@ant-design/icons";
 import ProductImage from "../../../public/shoetransparent.png";
 
-const AllCollections = () => {
+const AllCollections = ({ name }) => {
   return (
     <div
       style={{ padding: "0em 3em", margin: "2em 0em" }}
@@ -15,7 +15,7 @@ const AllCollections = () => {
           marginTop: "4em",
         }}
       >
-        <h2 className="popular">All Collections</h2>
+        <h2 className="popular">{name}</h2>
         <h4
           style={{
             textDecoration: "underline",

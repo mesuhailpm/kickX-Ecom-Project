@@ -14,7 +14,7 @@ const ClientHomePage = () => {
       <TopBrands />
       <PopCollection />
       <TrendingNow />
-      <AllCollections />
+      <AllCollections name="All Collection" />
       <DiscoverAll />
       <Showrooms />
       <MemberContainer />

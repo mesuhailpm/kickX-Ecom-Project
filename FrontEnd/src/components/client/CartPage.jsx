@@ -1,4 +1,5 @@
 import { CloseCircleOutlined } from "@ant-design/icons";
+import { FaRegHeart, FaTrashAlt } from "react-icons/fa";
 import CartImage from "../../../public/shoetransparent.png";
 
 const CartPage = () => {
@@ -31,9 +32,27 @@ const CartPage = () => {
             <div className="cart-item">
               <div>
                 <img src={CartImage} alt="" className="cart-img" />
+                <div className="cart-item-info">
+                  <h4>Nike Air Max 24 React</h4>
+                  <p>Men's Shoe</p>
+                  <p>White/Gray/White</p>
+                  <p>Size: Large 6.5</p>
+                  <p>Quantity: 01</p>
+                  <p className="cart-item-icons">
+                    <FaRegHeart
+                      onClick={() => {
+                        alert("working");
+                      }}
+                    />
+                    <FaTrashAlt
+                      onClick={() => {
+                        alert("working");
+                      }}
+                    />
+                  </p>
+                </div>
               </div>
-              <div></div>
-              {/* <CloseCircleOutlined /> */}
+              <div>$280.00</div>
             </div>
           </article>
         </section>
@@ -70,7 +89,7 @@ const CartPage = () => {
             padding: ".5em 0",
           }}
         >
-          <h4>EStimated Tax</h4>
+          <h4>Estimated Tax</h4>
           <b>--</b>
         </span>
         <span
@@ -89,6 +108,19 @@ const CartPage = () => {
         <div className="cart-btns">
           <button className="cart-btn checkout-btn">CHECKOUT</button>
           <button className="cart-btn paypal-btn">PAYPAL</button>
+        </div>
+      </div>
+      <div className="shipping-details">
+        <div>
+          <h3>Shipping</h3>
+          <p>
+            To get shipping information
+            <span className="underline">Edit Location</span>
+          </p>
+        </div>
+        <div>
+          <h3>Free Pickup</h3>
+          <p className="underline">Find A Shop</p>
         </div>
       </div>
     </div>

@@ -41,9 +41,9 @@ export const ClientNavbar = () => {
           <Link to="/shop" className="router-link">
             Shop
           </Link>
-          <Link to="/product" className="router-link">
+          {/* <Link to="/product" className="router-link">
             Product
-          </Link>
+          </Link> */}
           <Link className="router-link">contact us</Link>
         </ul>
       </div>

@@ -3,6 +3,7 @@ import "./App.css";
 import ClientSharedHomePage from "./components/client/ClientSharedHomePage";
 import ClientHomePage from "./components/client/ClientHomePage";
 import ClientProductPage from "./components/client/ClientProductPage";
+import ClientShopPage from "./components/client/ClientShopPage";
 import CartPage from "./components/client/CartPage";
 import WishListPage from "./components/client/WishListPage";
 import Client404Page from "./components/client/Client404Page";
@@ -24,6 +25,7 @@ function App() {
           <Route path="product" element={<ClientProductPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="wishlist" element={<WishListPage />} />
+          <Route path="shop" element={<ClientShopPage />} />
           <Route path="*" element={<Client404Page />} />
         </Route>
         <Route path="/admin" element={<SharedLayout />}>

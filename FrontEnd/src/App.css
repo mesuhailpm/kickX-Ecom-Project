@@ -2,6 +2,49 @@
   background-color: #ffffff;
 }
 
+.client-navbar {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+}
+
+.goup {
+  height: 3em;
+  width: 3em;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  animation: pulse 2s infinite;
+}
+
+.goup:hover {
+  cursor: pointer;
+  background-color: black;
+  transition: 300ms ease-in-out;
+}
+
+.goup:hover > .gouparrow {
+  color: white;
+  transition: 300ms ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: #000000 0 0 0 0;
+  }
+  75% {
+    box-shadow: #ff69b400 0 0 0 10px;
+  }
+}
+
 .menuactive {
   background-color: black;
   color: white;
@@ -439,7 +482,7 @@
 
 .cart-page-parent {
   margin: 0 3em;
-  padding: 2em 0;
+  padding: 02em 0;
   /* background-color: blue; */
   display: grid;
   grid-template-columns: 4fr 2fr;
@@ -448,7 +491,6 @@
 
 .cart-left {
   /* background-color: yellow; */
-  height: 500px;
 }
 
 .free-shipping {
@@ -539,22 +581,65 @@
   margin: 0.75em 0;
 }
 
+.cart-parent {
+  border-bottom: 1px solid rgb(146, 132, 132);
+}
+
 .cart-item {
-  height: 150px;
+  height: auto;
   width: 100%;
-  background-color: blue;
+  /* background-color: blue; */
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1em;
+  /* display: none; */
 }
 
 .cart-item > div:nth-child(1) {
-  background-color: green;
+  /* background-color: green; */
+  display: flex;
+}
+
+.cart-item > div:nth-child(2) {
+  text-align: right;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-weight: bolder;
 }
 
 .cart-item > div:nth-child(1) > img {
-  height: 8em;
+  height: 14em;
   width: fit-content;
   background-color: #f8f8fa;
+}
+
+.cart-item-info {
+  /* background-color: purple; */
+  padding: 0.65em;
+  margin-left: 1em;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cart-item-icons > * {
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.shipping-details > div {
+  margin: 1.5em 0;
+}
+
+.shipping-details > div > * {
+  margin: 0.5em 0;
+}
+
+.underline {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* last line of style */
