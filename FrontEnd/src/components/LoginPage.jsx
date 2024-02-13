@@ -1,31 +1,83 @@
+import { Button, Checkbox, Form, Input } from "antd";
+
 const LoginPage = () => {
   return (
     <div
       style={{
         display: "flex",
-        height: "100vh",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="login-page"
     >
-      <div
-        style={{
-          width: "60%",
-          backgroundColor: "white",
-          border: "1px solid black",
-          padding: "1em",
-          borderRadius: "1em",
-        }}
-        className="container"
-      >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum similique
-        perferendis laudantium, ullam unde quasi deserunt! Obcaecati quidem
-        quisquam maiores delectus repellendus eum, quos nesciunt voluptas omnis
-        exercitationem necessitatibus similique beatae sapiente! Officia
-        recusandae repellendus odit, accusamus sequi excepturi? Architecto
-        laudantium accusantium eligendi dolorem cupiditate sed pariatur
-        praesentium, numquam tempore.
+      <div>
+        <h2 style={{ textAlign: "center" }}>Log In</h2>
+        <Form
+          name="basic"
+          labelCol={{
+            span: 8,
+          }}
+          wrapperCol={{
+            span: 16,
+          }}
+          style={{
+            margin: "5em 0",
+            width: "400px",
+            backgroundColor: "transparent",
+          }}
+          initialValues={{
+            remember: true,
+          }}
+          autoComplete="off"
+        >
+          <Form.Item
+            label="Username"
+            name="username"
+            rules={[
+              {
+                required: true,
+                message: "Please input your username!",
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[
+              {
+                required: true,
+                message: "Please input your password!",
+              },
+            ]}
+          >
+            <Input.Password />
+          </Form.Item>
+
+          <Form.Item
+            name="remember"
+            valuePropName="checked"
+            wrapperCol={{
+              offset: 8,
+              span: 16,
+            }}
+          >
+            <Checkbox>Remember me</Checkbox>
+          </Form.Item>
+
+          <Form.Item
+            wrapperCol={{
+              offset: 8,
+              span: 16,
+            }}
+          >
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+          </Form.Item>
+        </Form>
       </div>
     </div>
   );
